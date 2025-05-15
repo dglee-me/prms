@@ -6,6 +6,7 @@
         :key="i"
         :value="item"
         :to="item.path"
+        :active="route.path === item.path"
         color="primary"
       >
         <template #prepend>
@@ -18,19 +19,9 @@
 </template>
 
 <script setup>
-import {onMounted} from 'vue';
-import {useRoute} from 'vue-router';
+import {useRoute} from "vue-router";
 
 const route = useRoute();
-
-onMounted(() => {
-  console.log(route);
-  console.log(route.params);  // 동적 라우트 매개변수
-  console.log(route.query);   // URL의 쿼리 매개변수
-  console.log(route.name);    // 라우트 이름
-  console.log(route.path);    // 라우트 경로
-  console.log(route.hash); // {url}?#sectionId
-});
 
 const items = [
   {
@@ -49,8 +40,6 @@ const items = [
     icon: 'mdi-briefcase'
   }
 ];
-
-
 </script>
 
 <style lang="scss">
