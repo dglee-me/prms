@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <BaseAppBar />
+    <BaseAppBar/>
     <BaseSideBar/>
     <v-main>
       <router-view/>
@@ -12,3 +12,6 @@
 import BaseAppBar from "@/components/BaseAppBar.vue";
 import BaseSideBar from "@/components/BaseSideBar.vue";
 </script>
+
+<style lang="scss">
+</style>
